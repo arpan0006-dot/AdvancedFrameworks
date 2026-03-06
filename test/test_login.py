@@ -1,6 +1,7 @@
 
 from pages.login_page import LoginPage
 from test.base_test import BaseTest
+import pytest
 
 #def test_valid_login():
 #     driver = webdriver.Chrome()
