@@ -46,6 +46,10 @@ def driver(config):
     else:
         raise Exception(f"Unsupported browser {browser}")
 
+    driver.maximize_window()
+    yield driver
+    driver.quit()
+
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item,call):
