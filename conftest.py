@@ -31,7 +31,7 @@ def config():
 
 @pytest.fixture(scope="session")
 def driver(config):
-    browser=config["browser"]
+    browser=config["environments"]["practice"]["browser"]
 
     if browser=="chrome":
         driver=webdriver.Chrome()
