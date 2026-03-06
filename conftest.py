@@ -27,7 +27,11 @@ import allure
 
 @pytest.fixture(scope="session")
 def config():
-    return ConfigReader.read_config()
+    full_config = ConfigReader.read_config()
+    selected_env = full_config["environments"]["practice"]
+
+    return selected_env
+
 
 @pytest.fixture(scope="session")
 def driver(config):
