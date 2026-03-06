@@ -35,12 +35,14 @@ def config():
 
 @pytest.fixture(scope="session")
 def driver(config):
-    browser=config["environments"]["practice"]["browser"]
+    browser=config["browser"]
 
     if browser=="chrome":
         driver=webdriver.Chrome()
     elif browser=="firefox":
         driver=webdriver.Firefox()
+    elif browser=="edge":
+        driver=webdriver.Edge()
     else:
         raise Exception(f"Unsupported browser {browser}")
 
