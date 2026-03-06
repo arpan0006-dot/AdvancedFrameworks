@@ -7,7 +7,7 @@ class ConfigReader:
     def read_config():
         config_path=os.path.join(
             os.path.dirname(os.path.dirname(__file__)),
-            "config"
+            "config" ,
             "config.yaml"
         )
         with open(config_path,"r") as file:
